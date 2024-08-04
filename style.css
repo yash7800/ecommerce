@@ -1,0 +1,624 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.carousel .arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  background-color: rgba(255,255,255,0.7);
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.carousel .arrow.left {
+  left: 10px;
+}
+
+.carousel .arrow.right {
+  right: 10px;
+}
+
+.content {
+  padding: 40px;
+  text-align: center;
+}
+
+/* New Section Start */
+.new-section {
+  padding: 40px;
+  text-align: center;
+  background-color: #f8f8f8;
+  margin-left: 10px;
+}
+
+.new-section h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.dropdown-menu {
+  display: none; /* Hide the menu by default */
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1000;
+  right: 10px; /* Adjust based on your layout */
+  top: 40px; /* Adjust based on your layout */
+  width: 150px; /* Adjust based on your preference */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid #ccc;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Ensure the user icon and the menu are correctly aligned */
+#user-icon {
+  cursor: pointer;
+  position: relative;
+}
+
+#user-icon.active + .dropdown-menu {
+  display: block; /* Show the menu when the user icon is active */
+}
+
+.new-section p {
+  font-size: 16px;
+  color: #555;
+  align-items: center;
+  margin-top: -50px;
+  display: flex;
+  justify-content: center;
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.category {
+  background-color: #fff;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.category img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+
+.category h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.category a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* New Section End */
+
+/* New Arrivals Section Start */
+.new-arrivals-section {
+  padding: 40px;
+  background-color: #fff;
+}
+
+.new-arrivals-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-arrivals-header h1 {
+  font-size: 28px;
+}
+
+.new-arrivals-header a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.new-arrivals-carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 20px;
+  padding: 10px 0;
+}
+
+.new-arrival-item {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 20px;
+  min-width: 200px;
+  text-align: center;
+  position: relative;
+}
+
+.new-arrival-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.new-arrival-item .new-tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #000;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.new-arrival-item .discount-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ff0000;
+  color: #fff;
+  padding: 5px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+.new-arrival-item .add-to-cart {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.new-arrival-item .product-info h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.new-arrival-item .product-info p {
+  font-size: 16px;
+  color: #555;
+}
+
+.new-arrival-item .product-info .original-price {
+  text-decoration: line-through;
+  color: #999;
+}
+/* New Arrivals Section End */
+.shipping {
+  width: 200px; /* Fixed width of 262px */
+  height: 120px; /* Fixed height of 220px */
+  padding: 48px 32px; /* Top and bottom padding of 48px, left and right padding of 32px */
+  gap: 16px; /* This property is used in CSS Grid or Flexbox for spacing between elements */
+  opacity: 1; /* Completely transparent */
+  border:1px solid #ccc;
+  background-color: #f0f0f0;
+ border-radius: 10px;
+ font-size: 25px;
+ margin-left: 85px;
+
+}
+.mi{
+  font-size: 16px;
+  margin-top: -20px;
+}
+.support-options{
+  display: flex;
+  margin-top: 90px;
+  margin-bottom: 70px;
+}
+hr {
+  border: 0;
+  border-top: 2px solid #eef0f0; /* Adjust color and thickness */
+  margin: 20px 100px; /* Adjust spacing */
+}
+.others{
+  display: flex;
+  align-items: center;
+  background-color: #f0eded;
+}
+otherimg img{
+  display: block;
+  margin: auto;
+}
+.others-info{
+  display: block;
+}
+
+.btn2 button{
+  border-style: none;
+  background-color: #f0eded;
+  text-decoration-line: underline;
+  font-size: 17px;
+  margin: 30px 48px;
+  cursor: pointer;
+}
+h4{
+  font-size: 20px;
+  color:blue ;
+  margin:30px 50px;
+}
+p1{
+  
+  display: block;
+  margin:30px 50px;
+  font-weight:550;
+  font-size: 60px;
+}
+p2{
+  margin:30px 50px;
+  
+}
+.newsletter img{
+  width: 100%;
+
+}
+hr {
+  border: 0;
+  border-top:0.5px solid #000000; /* Adjust color and thickness */
+  margin: 0 100px; /* Adjust spacing */
+}
+.oinfo{
+margin-top: -250px;
+align-items: center;
+justify-content: center;
+display:flex ;
+}
+footer {
+  background-color: #1e1e1e;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #333;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-top .logo h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.footer-top .logo p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.footer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.footer-nav ul li {
+  margin-left: 20px;
+}
+
+.footer-nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-bottom {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+}
+
+.footer-bottom .policies a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.footer-bottom .social-icons a {
+  margin-left: 20px;
+}
+
+.footer-bottom .social-icons img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Cart Sidebar Styles */
+.cart-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  background: white;
+  box-shadow: -2px 0 5px rgba(0,0,0,0.5);
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.cart-sidebar.open {
+  transform: translateX(0);
+}
+
+.cart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close-cart {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.cart-items {
+  margin-top: 20px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.cart-item-details {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.cart-item-price {
+  font-weight: bold;
+}
+
+.cart-summary {
+  margin-top: 20px;
+}
+
+.cart-summary p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#checkout-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#checkout-button:hover {
+  background-color: #555;
+}
+
+.cart-sidebar a {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #333;
+  text-decoration: none;
+}
+
+/* Shop Footer Styles */
+.shop-footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+}
+
+/* Newsletter Styles */
+.newsletter {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f8f8;
+  margin-top: 20px; /* Ensure it doesn't overlap with footer */
+  z-index: 2; /* Ensure it is above other sections */
+}
+
+.newsletter img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Behind the text */
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.newsletter p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.newsletter input[type="email"] {
+  padding:10px 10px;
+  width: 350px;
+  max-width: 100%;
+  margin-left: 0.5%;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  position: relative; /* or absolute if you want to position it exactly */
+    z-index: 2; /* Ensure the input has a higher z-index */
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+}
+
+.newsletter .signup {
+  padding: 10px 50px;
+  background-color: #333;
+  color: #fff;
+  margin-left: 45%;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+.newsletter .signup:hover {
+  background-color: #555;
+}
+
+
+
+/* Footer Styles */
+footer {
+  padding: 200px 0;
+  text-align: center;
+  height: 1px;
+  background-color: #000;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: #ffffff;
+  max-width: 1200px;
+}
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  margin-left: -60%;
+}
+
+.footer-logo p{
+  margin-left: -100px;
+  margin-top: 2px;
+  color: white;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  color: white;
+  width: 400px;
+  
+
+}
+.footer-links li {
+  margin: 0 50px;
+  color: white;
+  margin-bottom: 5%;
+
+}
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -200px; /* Assuming you need this for some reason */
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  /* Add padding or margin if needed for visual spacing */
+  padding: 10px;
+}

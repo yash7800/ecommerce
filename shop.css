@@ -1,0 +1,296 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000;
+  margin: 0 15px;
+}
+
+.navbar .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Shop Header Styles */
+.shop-header {
+  position: relative;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.shop-header img {
+  width: 100%;
+  height: auto;
+}
+
+.shop-header-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #000;
+  padding: 20px;
+  border-radius: 10px;
+  
+  z-index: 1; /* Ensure it is above the image */
+}
+
+.shop-header-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.shop-header-text p {
+  font-size: 18px;
+}
+
+/* Shop Filters Styles */
+.shop-filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.shop-filters .filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shop-filters label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.shop-filters select {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Shop Grid Styles */
+.shop-grid {
+ display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: 400px;
+ 
+}
+
+.product-item {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+}
+
+.product-badge {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  background-color: #09ffb9;
+  color: #000000;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 10px;
+  width: 50px;
+}
+
+.product-item img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  margin-bottom: 10px;
+
+}
+
+.product-item h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.product-item p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.product-item .old-price {
+  text-decoration: line-through;
+  color: #999;
+  margin-left: 10px;
+}
+
+.add-to-cart {
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.add-to-cart:hover {
+  background-color: #555;
+}
+
+/* Shop Footer Styles */
+.shop-footer {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #f8f8f8;
+}
+
+/* Newsletter Styles */
+.newsletter {
+  position: relative;
+  text-align: center;
+  padding: 50px;
+  background-color: #f8f8f8;
+  margin-top: 20px; /* Ensure it doesn't overlap with footer */
+  z-index: 2; /* Ensure it is above other sections */
+}
+
+.newsletter img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Behind the text */
+}
+
+.newsletter h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.newsletter p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.newsletter input[type="email"] {
+  padding:10px 10px;
+  width: 350px;
+  max-width: 100%;
+  margin-left: 0.5%;
+  border-radius: 4px;
+  background-color: #ffffff;
+  margin-bottom: 10px;
+  position: relative; /* or absolute if you want to position it exactly */
+    z-index: 2; /* Ensure the input has a higher z-index */
+    border: none;
+    border-bottom: 1px solid black;
+    background: none;
+}
+
+.newsletter .signup {
+  padding: 10px 50px;
+  background-color: #333;
+  color: #fff;
+  margin-left: 45%;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  z-index: 2;
+  position: relative;
+  display: block;
+}
+
+.newsletter .signup:hover {
+  background-color: #555;
+}
+
+
+
+/* Footer Styles */
+footer {
+  padding: 200px 0;
+  text-align: center;
+  height: 1px;
+  background-color: #000;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  color: #ffffff;
+  max-width: 1200px;
+}
+.footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  position:sticky;
+}
+hr{
+  height: 50px;
+  color: aliceblue;
+  margin-top: -10px;
+  margin-left: 40px;
+}
+.footer-logo p{
+  margin-left: 40px;
+  margin-top: 4px;
+  color: white;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  color: white;
+  width: 400px;
+
+}
+.footer-links li {
+  margin: 0 50px;
+  color: white;
+
+}
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: -200px; /* Assuming you need this for some reason */
+}
+
+.footer-social a {
+  color: #fff;
+  text-decoration: none;
+  /* Add padding or margin if needed for visual spacing */
+  padding: 10px;
+}

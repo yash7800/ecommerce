@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3legant</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Check if the page is loaded from a file URL
+            if (window.location.protocol === 'file:') {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            const token = localStorage.getItem('token');
+            if (!token) {
+                window.location.href = 'login.html';
+                return;
+            }
+
+            try {
+                const response = await fetch('http://localhost:5000/api/protected', {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+                if (response.status === 401) {
+                    window.location.href = 'login.html';
+                }
+            } catch (error) {
+                console.error('Error checking authentication:', error);
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
+</head>
+<body>
+    <!-- Your existing content here -->
+    <div class="navbar">
+        <div class="logo">3legant</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="productpage2.html">Product</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div>
+            <a href="#">🔍</a>
+            <a href="#" id="cart-icon">🛒</a>
+            <a href="#">👤</a>
+        </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h2>Cart</h2>
+            <button id="close-cart" class="close-cart">✖</button>
+        </div>
+        <div class="cart-items">
+            <!-- Cart items will be injected here by JavaScript -->
+        </div>
+        <div class="cart-summary">
+            <p>Subtotal: <span id="cart-subtotal">$0.00</span></p>
+            <p>Total: <span id="cart-total">$0.00</span></p>
+            <button id="checkout-button">Checkout</button>
+            <a href="#">View Cart</a>
+        </div>
+    </div>
+    <div class="carousel">
+        <button class="arrow left">◀</button>
+        <img src="head.png" alt="Sofa">
+        <button class="arrow right">▶</button>
+    </div>
+
+    <!-- New Section Start -->
+    <div class="new-section">
+        <h1>Simply Unique/ <br> Simply Better.</h1>
+        <p>3legant is a gift & decorations store based in HCMC, Vietnam. Est since 2019.</p>
+        
+        <div class="categories">
+            <div class="category">
+                <img src="living.png" alt="Living Room">
+                <h2>Living Room</h2>
+                <a href="#">Shop Now →</a>
+            </div>
+            <div class="category">
+                <img src="bedroom.png" style="height: 500px; width:400px" alt="Bedroom">
+                <h2>Bedroom</h2>
+                <a href="#">Shop Now →</a>
+            </div>
+            <div class="category">
+                <img src="kitchen.png" style="height: 500px; width:400px"  alt="Kitchen">
+                <h2>Kitchen</h2>
+                <a href="#">Shop Now →</a>
+            </div>
+        </div>
+    </div>
+    <!-- New Section End -->
+
+    <div class="new-arrivals-header">
+        <h1>New Arrivals</h1>
+        <a href="#">More Products →</a>
+    </div>
+    <div class="new-arrivals-carousel">
+        <div class="new-arrival-item">
+            <div class="new-tag">NEW</div>
+            <div class="discount-tag">-50%</div>
+            <img src="couch.png" alt="Loveseat Sofa">
+            <button class="add-to-cart">Add to cart</button>
+            <div class="product-info">
+                <h2>Loveseat Sofa</h2>
+                <p>$199.00 <span class="original-price">$400.00</span></p>
+            </div>
+        </div>
+        <div class="new-arrival-item">
+            <div class="new-tag">NEW</div>
+            <div class="discount-tag">-50%</div>
+            <img src="tablelamp.png" alt="Table Lamp">
+            <button class="add-to-cart">Add to cart</button>
+            <div class="product-info">
+                <h2>Table Lamp</h2>
+                <p>$24.99</p>
+            </div>
+        </div>
+        <div class="new-arrival-item">
+            <div class="new-tag">NEW</div>
+            <div class="discount-tag">-50%</div>
+            <img src="lampp.png" alt="Beige Table Lamp">
+            <button class="add-to-cart">Add to cart</button>
+            <div class="product-info">
+                <h2>Beige Table Lamp</h2>
+                <p>$24.99</p>
+            </div>
+        </div>
+        <div class="new-arrival-item">
+            <div class="new-tag">NEW</div>
+            <div class="discount-tag">-50%</div>
+            <img src="basket.png" alt="Bamboo basket">
+            <button class="add-to-cart">Add to cart</button>
+            <div class="product-info">
+                <h2>Bamboo basket</h2>
+                <p>$24.99</p>
+            </div>
+        </div>
+        <div class="new-arrival-item">
+            <div class="new-tag">NEW</div>
+            <div class="discount-tag">-50%</div>
+            <img src="kitchen.png" style="height: 300px; width:250px" alt="Toasted">
+            <button class="add-to-cart">Add to cart</button>
+            <div class="product-info">
+                <h2>Toasted</h2>
+                <p>$224.99</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="support-options">
+        <div class="shipping">
+            <img src="fast delivery.png" alt="Fast Delivery">
+            <p>Free Shipping</p>
+            <div class="mi">
+                <p>Order above $200</p>
+            </div>
+        </div>
+        
+        <div class="shipping">
+            <img src="money.png" alt="Money-back">
+            <p>Money-back</p>
+            <div class="mi">
+                <p>30 days guarantee</p>
+            </div>
+        </div>
+        
+        <div class="shipping">
+            <img src="lock 01.png" alt="Secure Payments">
+            <p>Secure Payments</p>
+            <div class="mi">
+                <p>Secured by stripe</p>
+            </div>
+        </div>
+        
+        <div class="shipping">
+            <img src="call.png" alt="24/7 Support">
+            <p>24/7 Support</p>
+            <div class="mi">
+                <p>Phone and Email support</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- <div class="others">
+        <div class="otherimg">
+            <img src="Paste image.png" alt="Sale">
+        </div>
+        <div class="others-info">
+            <h4>SALE UP TO 35% OFF</h4>
+            <p>HUNDREDS of New Lower prices!</p>
+            <p>It's more affordable than ever to give every room in your home a stylish makeover</p>
+            <div class="btn2">
+                <button>Shop Now</button>
+            </div>
+        </div>
+    </div> -->
+
+    <hr>
+
+    <div class="newsletter">
+        <img src="1.png">
+        <div class="cont">
+          <h2>Join Our Newsletter</h2>
+          <p>Sign up for deals, new products and promotions.</p>
+          <input type="email" placeholder="Email address">
+          <button class="signup">Signup</button>
+        </div>
+      </div>
+  
+      <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                3legant.
+                
+            </div>
+            <ul class="footer-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="productpage2.html">Product</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+        <!-- <p2>Copyright © 2023 3legant. All rights reserved <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></p2> -->
+    </footer>
+    <script src="cart.js"></script>
+</body>
+</html>

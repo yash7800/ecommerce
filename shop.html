@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page - 3legant</title>
+    <link rel="stylesheet" href="shop.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">3legant</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop</a>
+            <a href="productpage2.html">Product</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div>
+            <a href="#">🔍</a>
+            <a href="#" id="cart-icon">🛒</a>
+            <a href="#">👤</a>
+        </div>
+    </div>
+
+    <div class="shop-header">
+      <img src="Paste Image2.png" alt="Header Image">
+      <div class="shop-header-text">
+          <h1>Shop Page</h1>
+          <p>Let's design the place you always imagined.</p>
+      </div>
+  </div>
+
+    <div class="shop-filters">
+        <div class="filter">
+            <label for="categories">Categories</label>
+            <select id="categories">
+                <option>Living Room</option>
+                <option>Bedroom</option>
+                <option>Kitchen</option>
+                <option>Office</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="price">Price</label>
+            <select id="price">
+                <option>All Price</option>
+                <option>$0 - $50</option>
+                <option>$50 - $100</option>
+                <option>$100 - $200</option>
+                <option>$200+</option>
+            </select>
+        </div>
+        <div class="filter">
+            <label for="sort">Sort by</label>
+            <select id="sort">
+                <option>Default</option>
+                <option>Popularity</option>
+                <option>Rating</option>
+                <option>Newest</option>
+                <option>Price: Low to High</option>
+                <option>Price: High to Low</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="shop-grid">
+        <!-- Add product items here -->
+        <div class="product-item">
+            <div class="product-badge">NEW</div>
+            <img src="Paste image.png" alt="Product Image">
+            <h2>Loveseat Sofa</h2>
+            <p>$199.00 <span class="old-price">$400.00</span></p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="product-item">
+            <div class="product-badge">NEW</div>
+            <img src="card.png" alt="Product Image">
+            <h2>Luxury Sofa</h2>
+            <p>$299.00 <span class="old-price">$500.00</span></p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="product-item">
+            <div class="product-badge">NEW</div>
+            <img src="2.png" alt="Product Image">
+            <h2>Table Lamp</h2>
+            <p>$19.00</p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <div class="product-item">
+            <div class="product-badge">NEW</div>
+            <img src="3.png" alt="Product Image">
+            <h2>Cozy Sofa</h2>
+            <p>$299.00</p>
+            <button class="add-to-cart">Add to cart</button>
+        </div>
+        <!-- Repeat product items as needed -->
+    </div>
+
+    <div class="shop-footer">
+        <button class="show-more">Show more</button>
+    </div>
+
+    <div class="newsletter">
+      <img src="1.png">
+      <div class="cont">
+        <h2>Join Our Newsletter</h2>
+        <p>Sign up for deals, new products and promotions.</p>
+        <input type="email" placeholder="Email address">
+        <button class="signup">Signup</button>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-container">
+          <div class="footer-logo">
+              3legant.
+              <hr>
+              <p>
+              Gift & Decoration Store
+              </p>
+          </div>
+          <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              <li><a href="productpage2.html">Product</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact Us</a></li>
+          </ul>
+          <div class="footer-social">
+              <a href="#"><i class="fa fa-instagram">Instagram</i></a>
+              <a href="#"><i class="fa fa-facebook">Facebook</i></a>
+              <a href="#"><i class="fa fa-youtube">Youtube</i></a>
+          </div>
+      </div>
+      <p>Copyright © 2023 3legant. All rights reserved <a href="#">Privacy Policy</a> <a href="#">Terms of Use</a></p>
+  </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
