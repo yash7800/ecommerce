@@ -1,0 +1,8 @@
+simply download the code 
+open it in Vs code.
+then open the terminal, make sure you're in my-backend directory.
+then write "node server.js".
+after getting the server started on local host5000,click on login.html page in vs code.
+simply go live with login.html page and then click on signup and after that sign in with the information u signed up.
+you will be direted to the main page.
+(a lot of site is yet to build as i got the less time this is what i was able to build in this much timee)
